@@ -40,9 +40,6 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password_hash`, `role`, `created_at`) VALUES
-(1, 'Admin', 'admin@local.test', '$2y$10$UX7QwsKKi/A3eutn1PgDNuI1TepDFhpr1ze6XLS5D3edrssSj98wG', 'admin', '2026-04-12 03:36:54');
-
 --
 -- Indexes for dumped tables
 --
@@ -62,7 +59,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
