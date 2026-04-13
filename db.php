@@ -14,5 +14,5 @@ try {
     $conn->set_charset("utf8mb4");
 } catch (mysqli_sql_exception $e) {
     http_response_code(500);
-    die("Database connection failed."); // don’t expose details publicly
+    die("Database connection failed: " . $e->getMessage());
 }
