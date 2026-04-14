@@ -546,8 +546,8 @@
 
 <!-- HERO -->
 <section id="home" class="hero reveal">
-  <span class="shape-dot" style="top:140px; left:58%"></span>
-  <span class="shape-blob" style="top:185px; left:49%"></span>
+  <span class="shape-dot shape-dot--1"></span>
+  <span class="shape-blob shape-blob--1"></span>
 
   <div class="container hero-grid">
     <div>
