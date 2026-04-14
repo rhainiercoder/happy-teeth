@@ -58,7 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body class="authPage">
 
-  <?php require __DIR__ . "/partials/public_header.php"; ?>
+  <?php
+    $active = ""; // optional
+    require __DIR__ . "/partials/public_header.php";
+  ?>
 
   <div class="authShell">
     <section class="authHero">
