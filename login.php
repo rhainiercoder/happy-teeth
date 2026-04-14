@@ -47,7 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="utf-8" />
   <title>Login - Happy Teeth</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/auth.css">
 </head>
 <body class="authPage">
 
@@ -75,7 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
       <?php endif; ?>
 
-      <!-- Optional (UI only) -->
       <button class="authGoogleBtn" type="button" onclick="alert('Google login is UI only for now.');">
         <span style="font-weight:900;">G</span> Log in with Google
       </button>

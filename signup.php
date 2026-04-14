@@ -52,7 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="utf-8" />
   <title>Sign up - Happy Teeth</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/auth.css">
 </head>
 <body class="authPage">
 

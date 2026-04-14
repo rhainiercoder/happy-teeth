@@ -9,7 +9,8 @@ $active = "payments";
 <head>
   <meta charset="utf-8" />
   <title>Patient - Payment History</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
