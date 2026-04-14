@@ -45,38 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="utf-8" />
   <title>Login - Happy Teeth</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/auth.css">
 </head>
 <body class="authPage">
 
-  <header class="authTopbar">
-    <div class="authBrand2">
-      <div class="authLogoMark">
-        <img
-            src="/happy-teeth/assets/img/logo.png"
-            alt="Happy Teeth"
-            style="width:100%; height:100%; object-fit:contain; display:block;"
-          />
-      </div>
-      <div>
-        Happy Teeth
-        <small>Dental Clinic</small>
-      </div>
-    </div>
-
-    <nav class="authNav">
-      <a href="/happy-teeth/index.php">Home</a>
-      <a href="/happy-teeth/index.php#about">About Us</a>
-      <a href="/happy-teeth/index.php#services">Services</a>
-      <a href="/happy-teeth/index.php#testimonials">Testimonials</a>
-      <a href="/happy-teeth/index.php#contact">Contact</a>
-    </nav>
-
-    <div class="authNavRight">
-      <a class="authBtnGhost" href="/happy-teeth/login.php">Login</a>
-      <a class="authBtnPrimary" href="/happy-teeth/signup.php">Sign up</a>
-    </div>
-  </header>
+  <?php require __DIR__ . "/partials/public_header.php"; ?>
 
   <div class="authShell">
     <section class="authHero">
@@ -97,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
       <?php endif; ?>
 
-      <!-- Optional (UI only) -->
       <button class="authGoogleBtn" type="button" onclick="alert('Google login is UI only for now.');">
         <span style="font-weight:900;">G</span> Log in with Google
       </button>
