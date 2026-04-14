@@ -15,7 +15,7 @@
 
 3. Import the SQL:
    - In phpMyAdmin → select `happy_teeth_db` → Import
-   - Import: `database/happy_teeth_db.sql`
+   - Import: `happy_teeth_db.sql`
 
 4. Run the project:
    - Start Apache + MySQL in XAMPP
