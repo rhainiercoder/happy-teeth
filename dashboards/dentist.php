@@ -1,11 +1,15 @@
 <?php
 require_once __DIR__ . "/../auth.php";
+<<<<<<< HEAD
 require_once __DIR__ . "/../db.php";
 
+=======
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 $user = require_role(["dentist"]);
 $role = $user["role"];
 $active = "dashboard";
 
+<<<<<<< HEAD
 function h($v){ return htmlspecialchars((string)$v); }
 
 $today = get_clinic_date('00:00','Asia/Manila');
@@ -13,6 +17,20 @@ $today = get_clinic_date('00:00','Asia/Manila');
 /* ---------- Today's approved appointments for this dentist ---------- */
 $stmt = $conn->prepare("
   SELECT a.id, a.appointment_time, u.name AS patient_name, s.name AS service
+=======
+require_once __DIR__ . "/../db.php";
+function h($v){ return htmlspecialchars((string)$v); }
+
+$today = date("Y-m-d");
+
+// Real "Today's Patient" list for this dentist
+$stmt = $conn->prepare("
+  SELECT
+    a.id,
+    u.name AS patient_name,
+    a.appointment_time,
+    s.name AS service
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
   FROM appointments a
   JOIN users u ON u.id = a.patient_id
   JOIN services s ON s.id = a.service_id
@@ -23,6 +41,7 @@ $stmt = $conn->prepare("
 ");
 $stmt->bind_param("si", $today, $user["id"]);
 $stmt->execute();
+<<<<<<< HEAD
 $appointments = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 /* ---------- Load dentist weekly availability (1=Mon .. 7=Sun) ---------- */
@@ -77,12 +96,16 @@ for ($d = 1; $d <= 7; $d++) {
     $display_by_day[$d] = implode(', ', $parts);
   }
 }
+=======
+$rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Dentist Dashboard</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
   <style>
     /* local tweaks to match screenshot layout */
@@ -97,6 +120,10 @@ for ($d = 1; $d <= 7; $d++) {
       .hours__row{ flex-direction:row; }
     }
   </style>
+=======
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
   <?php include __DIR__ . "/../partials/sidebar.php"; ?>
@@ -114,6 +141,7 @@ for ($d = 1; $d <= 7; $d++) {
       </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Your Operating Hours (like screenshot) -->
     <section class="card">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
@@ -143,6 +171,10 @@ for ($d = 1; $d <= 7; $d++) {
     <!-- Today's Patients -->
     <section class="card dentistSection" style="margin-top:12px;">
       <h2 class="sectionTitle">Today's Patients! (<?php echo h($today); ?>)</h2>
+=======
+    <section class="card dentistSection">
+      <h2 class="sectionTitle">Today's Patient! (<?php echo h($today); ?>)</h2>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 
       <div class="table">
         <div class="table__row table__row--head" style="grid-template-columns: 1.2fr .6fr 1fr .7fr;">
@@ -152,7 +184,11 @@ for ($d = 1; $d <= 7; $d++) {
           <div style="text-align:right;">Action</div>
         </div>
 
+<<<<<<< HEAD
         <?php foreach ($appointments as $r): ?>
+=======
+        <?php foreach ($rows as $r): ?>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
           <div class="table__row" style="grid-template-columns: 1.2fr .6fr 1fr .7fr;">
             <div class="patientCell">
               <div class="patientCell__icon">
@@ -177,7 +213,11 @@ for ($d = 1; $d <= 7; $d++) {
           </div>
         <?php endforeach; ?>
 
+<<<<<<< HEAD
         <?php if (!$appointments): ?>
+=======
+        <?php if (!$rows): ?>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
           <div class="table__row">
             <div style="grid-column:1 / -1; font-weight:900; opacity:.75;">
               No approved appointments for today.
@@ -187,6 +227,45 @@ for ($d = 1; $d <= 7; $d++) {
       </div>
     </section>
 
+<<<<<<< HEAD
+=======
+    <section class="card dentistSection">
+      <h2 class="sectionTitle">Your Operating Hours</h2>
+
+      <div class="hours">
+        <div class="hours__row">
+          <div class="hours__left"><span class="clock">🕘</span> Monday</div>
+          <div class="hours__right">10:00 AM – 12:00 PM</div>
+        </div>
+        <div class="hours__row">
+          <div class="hours__left"><span class="clock">🕘</span> Tuesday</div>
+          <div class="hours__right">10:00 AM – 12:00 PM</div>
+        </div>
+        <div class="hours__row">
+          <div class="hours__left"><span class="clock">🕘</span> Friday</div>
+          <div class="hours__right">1:00 PM – 3:00 PM</div>
+        </div>
+        <div class="hours__row">
+          <div class="hours__left"><span class="clock">🕘</span> Saturday</div>
+          <div class="hours__right">1:00 PM – 3:00 PM</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dentistSection">
+      <h2 class="sectionTitle">Clinic Location</h2>
+
+      <div class="map">
+        <iframe
+          title="Clinic Location Map"
+          class="map__frame"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Manila%2C%20Philippines&output=embed"
+        ></iframe>
+      </div>
+    </section>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
   </main>
 </body>
 </html>

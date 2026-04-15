@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
   --sidebar:#1aa9e3;
   --sidebar-dark:#0b2f4f;
@@ -1990,3 +1991,9 @@ body.landing .landingBottomNav a:hover{ opacity:1; text-decoration:underline; }
   body.landing .landingServiceGrid{ grid-template-columns: 1fr; }
   body.landing .landingTestGrid{ grid-template-columns: 1fr; }
 }
+=======
+/* ==========================================================
+   style.css — Compatibility shim.
+   Pages that still reference this file get all modules.
+   Prefer linking the specific CSS files directly.
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b

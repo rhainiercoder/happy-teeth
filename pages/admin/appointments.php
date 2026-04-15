@@ -15,6 +15,7 @@ $dentists = $conn->query("
   ORDER BY name ASC
 ")->fetch_all(MYSQLI_ASSOC);
 
+<<<<<<< HEAD
 // Build map by id for quick lookup
 $dentistById = [];
 foreach ($dentists as $d) $dentistById[(int)$d["id"]] = $d;
@@ -37,6 +38,11 @@ try {
   // ignore — table might not exist on older installs
 }
 
+=======
+$dentistById = [];
+foreach ($dentists as $d) $dentistById[(int)$d["id"]] = $d;
+
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 // Handle approve/decline
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $id = (int)($_POST["id"] ?? 0);
@@ -93,7 +99,12 @@ $err = $_GET["err"] ?? "";
 <head>
   <meta charset="utf-8" />
   <title>Admin - Appointments</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+=======
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
@@ -133,6 +144,7 @@ $err = $_GET["err"] ?? "";
               <form method="post" style="display:flex; gap:8px; justify-content:flex-end; align-items:center; flex-wrap:wrap;">
                 <input type="hidden" name="id" value="<?php echo (int)$r["id"]; ?>">
 
+<<<<<<< HEAD
                 <?php
                   // Compute weekday for appointment date: 1=Mon ... 7=Sun
                   $weekday = (int)date('N', strtotime($r['appointment_date']));
@@ -180,6 +192,16 @@ $err = $_GET["err"] ?? "";
                       </optgroup>
                     <?php endif; ?>
                   <?php endif; ?>
+=======
+                <select name="dentist_id"
+                  style="padding:9px 10px; border-radius:12px; border:1px solid rgba(11,31,42,.15); font-weight:800;">
+                  <option value="">Choose dentist</option>
+                  <?php foreach ($dentists as $d): ?>
+                    <option value="<?php echo (int)$d["id"]; ?>">
+                      <?php echo h($d["name"]); ?>
+                    </option>
+                  <?php endforeach; ?>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
                 </select>
 
                 <button class="btn btn--dark" name="action" value="approve" type="submit">Approve</button>

@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
+<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 $user = require_role(["dentist"]);
 $role = $user["role"];
@@ -24,11 +25,25 @@ $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 <html>
 <head><meta charset="utf-8" /><title>Dentist - Transaction History</title>
 <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+=======
+$user = require_role(["dentist"]);
+$role = $user["role"];
+$active = "transactions";
+?>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dentist - Transaction History</title>
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
 <main class="main">
   <div class="pageHead"><h1 class="pageHead__title">Transaction History</h1></div>
+<<<<<<< HEAD
 
   <section class="card" style="background:var(--accent-mid);">
     <h2 class="sectionTitle">Payments for your appointments</h2>
@@ -52,6 +67,9 @@ $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
       <?php endif; ?>
     </div>
   </section>
+=======
+  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> payment history related to appointments.</div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </main>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require __DIR__ . "/db.php";
 
 $error = "";
@@ -45,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="utf-8" />
   <title>Login - Happy Teeth</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
 </head>
 <body class="authPage">
@@ -83,6 +86,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <img class="authHero__img" src="/happy-teeth/assets/img/facility_2.jpg" alt="Happy Teeth clinic">
       <div class="authHero__overlay"></div>
 
+=======
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/auth.css">
+</head>
+<body class="authPage">
+
+  <?php
+    $active = ""; // optional
+    require __DIR__ . "/partials/header.php";
+  ?>
+
+  <div class="authShell">
+    <section class="authHero">
+      <img class="authHero__img" src="/happy-teeth/assets/img/facility_2.jpg" alt="Happy Teeth clinic">
+      <div class="authHero__overlay"></div>
+
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
       <div class="authQuote">
         “For There Was Never Yet Philosopher, That Could Endure The Toothache Patiently”
         <span class="authQuote__by">~ Dr. Dre Andre Romelle</span>
@@ -97,7 +118,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
       <?php endif; ?>
 
+<<<<<<< HEAD
       <!-- Optional (UI only) -->
+=======
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
       <button class="authGoogleBtn" type="button" onclick="alert('Google login is UI only for now.');">
         <span style="font-weight:900;">G</span> Log in with Google
       </button>

@@ -186,6 +186,8 @@ try {
       <h1 class="pageHead__title">Welcome Back Admin <?php echo h($user["name"] ?? ""); ?>!</h1>
     </div>
 
+
+
     <!-- Top stats -->
     <section class="grid grid-2 adminStats">
       <div class="card statCard">

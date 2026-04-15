@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
+<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 $user = require_role(["patient"]);
 $role = $user["role"];
@@ -42,18 +43,30 @@ $stmt2->execute();
 $upcoming = $stmt2->get_result()->fetch_all(MYSQLI_ASSOC);
 
 $ok = $_GET['ok'] ?? $ok;
+=======
+$user = require_role(["patient"]);
+$role = $user["role"];
+$active = "payments";
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
+<<<<<<< HEAD
   <title>Payment History</title>
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+=======
+  <title>Patient - Payment History</title>
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
 <main class="main">
   <div class="pageHead"><h1 class="pageHead__title">Payment History</h1></div>
+<<<<<<< HEAD
 
   <?php if ($ok): ?><div class="card callout callout--ok"><?php echo h($ok); ?></div><?php endif; ?>
   <?php if ($err): ?><div class="card callout callout--error"><?php echo h($err); ?></div><?php endif; ?>
@@ -111,6 +124,9 @@ $ok = $_GET['ok'] ?? $ok;
       <div class="small-muted">No upcoming pending appointments to pay.</div>
     <?php endif; ?>
   </section>
+=======
+  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> invoices + payment receipts.</div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </main>
 </body>
 </html>

@@ -6,6 +6,7 @@
 
   <title>Happy Teeth Dental Clinic</title>
 
+<<<<<<< HEAD
   <style>
     :root{
       --blue:#2f63e0;
@@ -548,6 +549,20 @@
 <section id="home" class="hero reveal">
   <span class="shape-dot" style="top:140px; left:58%"></span>
   <span class="shape-blob" style="top:185px; left:49%"></span>
+=======
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/landing.css">
+</head>
+<body>
+
+<?php require __DIR__ . "/partials/public_header.php"; ?>
+
+<!-- HERO -->
+<section id="home" class="hero reveal">
+  <span class="shape-dot shape-dot--1"></span>
+  <span class="shape-blob shape-blob--1"></span>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 
   <div class="container hero-grid">
     <div>
@@ -560,10 +575,17 @@
 
     <div class="img-collage">
       <!-- Replace with your local images -->
+<<<<<<< HEAD
       <img src="assets/img/landing/hero-1.jpg" alt="">
       <img src="assets/img/landing/hero-2.jpg" alt="">
       <img src="assets/img/landing/hero-3.jpg" alt="">
       <img src="assets/img/landing/hero-4.jpg" alt="">
+=======
+      <img src="assets/img/service_1.jpg" alt="">
+      <img src="assets/img/faci_4.jpg" alt="">
+      <img src="assets/img/doctors.jpg" alt="">
+      <img src="assets/img/facility.jpg" alt="">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
     </div>
   </div>
 </section>
@@ -571,11 +593,19 @@
 <!-- ABOUT -->
 <section id="about" class="container about-strip reveal">
   <div class="about-card">
+<<<<<<< HEAD
     <img src="assets/img/landing/about-photo.jpg" alt="">
     <div>
       <div style="color:#4b9bff;font-size:15px;font-weight:700">Happy Teeth Dental Clinic</div>
       <div style="font-size:13px;color:#777">#11 Capt. Cruz St., Malinta, Valenzuela City</div>
       <div style="font-size:13px;color:#777">Tel: 8277-7424 / 0917-517-5306</div>
+=======
+    <img src="assets/img/faci_4.jpg" alt="">
+    <div>
+      <div class="about-clinic-name">Happy Teeth Dental Clinic</div>
+      <div class="about-clinic-detail">#11 Capt. Cruz St., Malinta, Valenzuela City</div>
+      <div class="about-clinic-detail">Tel: 8277-7424 / 0917-517-5306</div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
     </div>
   </div>
 
@@ -590,7 +620,11 @@
 </section>
 
 <!-- SERVICES -->
+<<<<<<< HEAD
 <section id="services" class="section reveal" style="background:linear-gradient(180deg,#f8fbff 0%, #eef4ff 100%)">
+=======
+<section id="services" class="section section--tinted reveal">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
   <div class="container">
     <div class="section-title">
       <h3>Services</h3>
@@ -649,7 +683,11 @@
       </p>
       <a class="btn light" href="#contacts">Make Appointment</a>
     </div>
+<<<<<<< HEAD
     <img src="assets/img/landing/cta.jpg" alt="">
+=======
+    <img src="assets/img/doctors_2.jpg" alt="">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
   </div>
 </section>
 
@@ -674,7 +712,11 @@
   <div class="section-title">
     <h3>TESTIMONIALS</h3>
     <h2>Our Happy Clients</h2>
+<<<<<<< HEAD
     <p style="font-size:16px;color:#777;max-width:70ch;margin:10px auto 0;">
+=======
+    <p class="section-subtitle">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
       We use only the best quality materials on the market in order to provide the best products to our patients.
     </p>
   </div>
@@ -694,10 +736,17 @@
 <!-- FORM CTA -->
 <section class="section container reveal">
   <div class="form-cta">
+<<<<<<< HEAD
     <img src="assets/img/landing/form-cta.jpg" alt="">
     <div>
       <h2>Are you still not sure?</h2>
       <p style="font-size:16px;opacity:.95;line-height:1.6">
+=======
+    <img src="assets/img/doctors_4.jpg" alt="">
+    <div>
+      <h2>Are you still not sure?</h2>
+      <p class="form-lead">
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
         Our administrator will select a convenient schedule of visits and answer all questions.
       </p>
 
@@ -709,7 +758,14 @@
 </section>
 
 <!-- CONTACTS / MAP -->
+<<<<<<< HEAD
 <!-- CONTACTS / MAP --> <section id="contacts" class="section container reveal"> <?php require_once __DIR__ . "/partials/clinic_map_widget.php"; ?>
+=======
+<section id="contacts" class="section container reveal">
+  <div class="map-img">
+    <img src="assets/img/landing/map.png" alt="Map">
+  </div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 
   <div class="contact-box">
     <div>📍 11 Capt. Cruz St., Malinta, Valenzuela City</div>
@@ -725,12 +781,21 @@
     <div class="brand">
       <img src="assets/img/logo.png" alt="logo"/>
       <div>
+<<<<<<< HEAD
         <div style="font-size:15px;color:#2a2a2a">Happy Teeth</div>
         <div style="font-size:12px;color:#8a8a8a">Dental Clinic</div>
       </div>
     </div>
 
     <div style="font-size:14px;color:#6f6f6f">© 2026 Happy Teeth Dental Clinic</div>
+=======
+        <div class="brand__name">Happy Teeth</div>
+        <div class="brand__sub">Dental Clinic</div>
+      </div>
+    </div>
+
+    <div class="footer__copy">© 2026 Happy Teeth Dental Clinic</div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 
     <a class="btn primary" href="#contacts">Make Appointment</a>
   </div>

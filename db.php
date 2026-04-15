@@ -27,6 +27,7 @@ try {
 } catch (mysqli_sql_exception $e) {
     http_response_code(500);
     die("Database connection failed: " . $e->getMessage());
+<<<<<<< HEAD
 }
 
 // clinic-day helper: returns the clinic "today" based on clinicStart
@@ -50,4 +51,6 @@ function get_clinic_date(string $clinicStart = '00:00', string $tz = null): stri
         return $now->modify('-1 day')->format('Y-m-d');
     }
     return $now->format('Y-m-d');
+=======
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 }

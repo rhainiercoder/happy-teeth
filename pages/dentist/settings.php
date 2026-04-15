@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
+<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 
 $user = require_role(["dentist"]);
@@ -112,11 +113,17 @@ try {
 
 $weekdayNames = [1=>'Monday',2=>'Tuesday',3=>'Wednesday',4=>'Thursday',5=>'Friday',6=>'Saturday',7=>'Sunday'];
 $msg = $_GET['msg'] ?? '';
+=======
+$user = require_role(["dentist"]);
+$role = $user["role"];
+$active = "settings";
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
+<<<<<<< HEAD
   <title>Dentist Settings</title>
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
   <style>.hoursTable{display:grid;gap:6px;}</style>
@@ -206,6 +213,17 @@ $msg = $_GET['msg'] ?? '';
     </script>
   </section>
 
+=======
+  <title>Dentist - Settings</title>
+  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
+  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
+</head>
+<body>
+<?php include __DIR__ . "/../../partials/sidebar.php"; ?>
+<main class="main">
+  <div class="pageHead"><h1 class="pageHead__title">Settings</h1></div>
+  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> profile + operating hours settings.</div>
+>>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </main>
 </body>
 </html>
