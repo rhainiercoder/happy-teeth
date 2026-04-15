@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
-<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 
 $user = require_role(["admin","staff"]);
@@ -119,30 +118,19 @@ $stmt->execute();
 $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 $msg = $_GET['msg'] ?? '';
-=======
-$user = require_role(["admin","staff"]);
-$role = $user["role"];
-$active = "transactions";
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Admin - Transactions</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
   <style>.tx-row{display:flex;justify-content:space-between;align-items:center;padding:10px 8px;border-bottom:1px solid rgba(11,31,42,.06)}</style>
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
 <main class="main">
   <div class="pageHead"><h1 class="pageHead__title">Transactions</h1></div>
-<<<<<<< HEAD
 
   <?php if ($msg): ?>
     <div class="card callout callout--info"><?php echo h($msg); ?></div>
@@ -206,9 +194,6 @@ $active = "transactions";
     <?php endif; ?>
 
   </section>
-=======
-  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> payments, invoices, refunds.</div>
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </main>
 </body>
 </html>

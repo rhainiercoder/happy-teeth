@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
-<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 
 $user = require_role(["admin","staff"]);
@@ -184,18 +183,12 @@ try {
 $totalRes = $conn->query("SELECT FOUND_ROWS() AS total");
 $total = (int)$totalRes->fetch_assoc()["total"];
 $pages = (int)ceil($total / $perPage);
-=======
-$user = require_role(["admin","staff"]);
-$role = $user["role"];
-$active = "dentists";
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Admin - Dentists</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
   <style>
     /* small inline styles for availability rows layout (keeps file self-contained) */
@@ -206,15 +199,10 @@ $active = "dentists";
     .avail-add { background:#0b2f4f; color:#fff; border-radius:10px; padding:8px 10px; border:0; cursor:pointer; }
     .small-muted{ font-weight:800; opacity:.8; font-size:13px; }
   </style>
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
 <main class="main">
-<<<<<<< HEAD
   <div class="pageHead">
     <h1 class="pageHead__title">Dentists</h1>
 
@@ -385,10 +373,5 @@ document.getElementById('addAvailBtn').addEventListener('click', function(){
 });
 </script>
 
-=======
-  <div class="pageHead"><h1 class="pageHead__title">Dentists</h1></div>
-  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> dentist list/schedules/availability.</div>
-</main>
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </body>
 </html>

@@ -72,12 +72,7 @@ $fallbackServiceImg = "teeth_icon.png";
 <head>
   <meta charset="utf-8" />
   <title>Patient Dashboard - Happy Teeth</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../partials/sidebar.php"; ?>

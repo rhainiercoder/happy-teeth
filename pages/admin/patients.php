@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
-<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 
 $user = require_role(["admin","staff"]);
@@ -105,28 +104,17 @@ $totalRes = $conn->query("SELECT FOUND_ROWS() AS total");
 $total = (int)$totalRes->fetch_assoc()["total"];
 $pages = (int)ceil($total / $perPage);
 
-=======
-$user = require_role(["admin","staff"]);
-$role = $user["role"];
-$active = "patients";
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Admin - Patients</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
 <main class="main">
-<<<<<<< HEAD
   <div class="pageHead">
     <h1 class="pageHead__title">Patients</h1>
 
@@ -229,10 +217,6 @@ $active = "patients";
     <?php endif; ?>
 
   </section>
-=======
-  <div class="pageHead"><h1 class="pageHead__title">Patients</h1></div>
-  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> list/search/add/edit patients.</div>
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </main>
 </body>
 </html>

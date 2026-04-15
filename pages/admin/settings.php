@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../auth.php";
-<<<<<<< HEAD
 require_once __DIR__ . "/../../db.php";
 
 $user = require_role(["admin","staff"]);
@@ -62,18 +61,12 @@ $clinic_lng = get_setting($conn, 'clinic_lng', '120.9842');
 $clinic_map_zoom = get_setting($conn, 'clinic_map_zoom', '15');
 
 $msg = $_GET['msg'] ?? '';
-=======
-$user = require_role(["admin","staff"]);
-$role = $user["role"];
-$active = "settings";
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Admin - Settings</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
 
   <!-- Leaflet CSS -->
@@ -215,16 +208,5 @@ $active = "settings";
   });
 })();
 </script>
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/dashboard.css">
-</head>
-<body>
-<?php include __DIR__ . "/../../partials/sidebar.php"; ?>
-<main class="main">
-  <div class="pageHead"><h1 class="pageHead__title">Settings</h1></div>
-  <div class="card" style="background:#e9f7ff;"><b>Coming soon:</b> clinic settings + account settings.</div>
-</main>
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
 </body>
 </html>

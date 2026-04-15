@@ -52,7 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="utf-8" />
   <title>Sign up - Happy Teeth</title>
-<<<<<<< HEAD
   <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
 </head>
 <body class="authPage">
@@ -109,42 +108,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
       <?php endif; ?>
 
-=======
-  <link rel="stylesheet" href="/happy-teeth/assets/css/base.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/public.css">
-  <link rel="stylesheet" href="/happy-teeth/assets/css/auth.css">
-</head>
-<body class="authPage">
-
-  <?php
-    $active = ""; // optional
-    require __DIR__ . "/partials/public_header.php";
-  ?>
-
-  <div class="authShell">
-    <section class="authHero">
-      <img class="authHero__img" src="/happy-teeth/assets/img/facility.jpg" alt="Happy Teeth clinic">
-      <div class="authHero__overlay"></div>
-
-      <div class="authQuote">
-        A healthy smile begins with a simple appointment.
-        <span class="authQuote__by">Happy Teeth Dental Clinic</span>
-      </div>
-    </section>
-
-    <section class="authPanel">
-      <h1 class="authH1">Create account</h1>
-      <p class="authLead">Sign up to book an appointment.</p>
-
-      <?php if (!empty($success)): ?>
-        <div class="authMsg2 authMsg2--ok"><?php echo htmlspecialchars($success); ?></div>
-      <?php endif; ?>
-
-      <?php if (!empty($error)): ?>
-        <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
-      <?php endif; ?>
-
->>>>>>> 1aabe8a3aaf38697cdd3494a24653af7cf05663b
       <div class="authDivider">Details</div>
 
       <form method="post">
