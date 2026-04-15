@@ -560,10 +560,10 @@
 
     <div class="img-collage">
       <!-- Replace with your local images -->
-      <img src="assets/img/landing/hero-1.jpg" alt="">
-      <img src="assets/img/landing/hero-2.jpg" alt="">
-      <img src="assets/img/landing/hero-3.jpg" alt="">
-      <img src="assets/img/landing/hero-4.jpg" alt="">
+      <img src="assets/img/doctors.jpg" alt="">
+      <img src="assets/img/service_1.jpg" alt="">
+      <img src="assets/img/facility.jpg" alt="">
+      <img src="assets/img/faci_4.jpg" alt="">
     </div>
   </div>
 </section>
@@ -571,7 +571,7 @@
 <!-- ABOUT -->
 <section id="about" class="container about-strip reveal">
   <div class="about-card">
-    <img src="assets/img/landing/about-photo.jpg" alt="">
+    <img src="assets/img/faci_4.jpg" alt="">
     <div>
       <div style="color:#4b9bff;font-size:15px;font-weight:700">Happy Teeth Dental Clinic</div>
       <div style="font-size:13px;color:#777">#11 Capt. Cruz St., Malinta, Valenzuela City</div>
@@ -584,6 +584,7 @@
     <h2>Patient health is the highest value in our work</h2>
     <p>
       The latest equipment, high‑precision digital technologies and the best achievements of modern world medicine have allowed us to create a completely new, unprecedented level of painlessness, safety and comfort for patients.
+    <br><br>
     </p>
     <a class="btn primary" href="#services">Learn More</a>
   </div>
@@ -599,37 +600,37 @@
 
     <div class="services">
       <div class="service-card">
-        <img src="assets/img/landing/service-1.jpg" alt="">
+        <img src="assets/img/implant_dentistry.png" alt="">
         <h4>Implant Dentistry</h4>
         <p>Restore your smile with precision implants, durable materials, and advanced planning for safe placement and long‑term comfort.</p>
         <a href="#contacts">Read more</a>
       </div>
       <div class="service-card">
-        <img src="assets/img/landing/service-2.jpg" alt="">
+        <img src="assets/img/surgery_dentistry.jpg" alt="">
         <h4>Surgery Dentistry</h4>
         <p>Gentle surgical care with modern anesthesia, clear recovery guidance, and full attention to your safety and comfort.</p>
         <a href="#contacts">Read more</a>
       </div>
       <div class="service-card">
-        <img src="assets/img/landing/service-3.jpg" alt="">
+        <img src="assets/img/dental_treatment.jpg" alt="">
         <h4>Dental Treatment</h4>
         <p>Comprehensive treatment for cavities, gum health, and tooth preservation using modern tools and pain‑free techniques.</p>
         <a href="#contacts">Read more</a>
       </div>
       <div class="service-card">
-        <img src="assets/img/landing/service-4.jpg" alt="">
+        <img src="assets/img/cosmetic_dentistry.jpg" alt="">
         <h4>Cosmetic Dentistry</h4>
         <p>Brighten and reshape your smile with veneers, whitening, and cosmetic bonding tailored to your facial harmony.</p>
         <a href="#contacts">Read more</a>
       </div>
       <div class="service-card">
-        <img src="assets/img/landing/service-5.jpg" alt="">
+        <img src="assets/img/orthodontics.jpg" alt="">
         <h4>Orthodontics</h4>
         <p>Align teeth with braces or clear aligners, guided by digital scans for accuracy and comfort.</p>
         <a href="#contacts">Read more</a>
       </div>
       <div class="service-card">
-        <img src="assets/img/landing/service-6.jpg" alt="">
+        <img src="assets/img/preventive_care.jpg" alt="">
         <h4>Preventive Care</h4>
         <p>Regular cleanings, checkups, and patient education to maintain strong teeth and healthy gums.</p>
         <a href="#contacts">Read more</a>
@@ -647,9 +648,10 @@
       <p>
         The latest equipment, high‑precision digital technologies and the best achievements of modern world medicine have allowed us to create a completely new, unprecedented level of painlessness, safety and comfort for patients.
       </p>
+      <br>
       <a class="btn light" href="#contacts">Make Appointment</a>
     </div>
-    <img src="assets/img/landing/cta.jpg" alt="">
+    <img src="assets/img/doctors_4.jpg" alt="">
   </div>
 </section>
 
@@ -661,11 +663,11 @@
   </div>
 
   <div class="doctors">
-    <div class="doc-card"><img src="assets/img/landing/doc-1.jpg" alt=""><h5>Darrel Steward</h5><span>Implant Surgeon</span></div>
-    <div class="doc-card"><img src="assets/img/landing/doc-2.jpg" alt=""><h5>Jacob Jones</h5><span>Dental Surgeon</span></div>
-    <div class="doc-card"><img src="assets/img/landing/doc-3.jpg" alt=""><h5>Jane Cooper</h5><span>Orthodontist</span></div>
-    <div class="doc-card"><img src="assets/img/landing/doc-4.jpg" alt=""><h5>Kristin Watson</h5><span>Cosmetic Dentist</span></div>
-    <div class="doc-card"><img src="assets/img/landing/doc-5.jpg" alt=""><h5>Ronald Richards</h5><span>Implant Surgeon</span></div>
+    <div class="doc-card"><img src="assets/img/jian.jpg" alt=""><h5>Dr. Jian Carlo Rañola</h5><span>Implant Surgeon</span></div>
+    <div class="doc-card"><img src="assets/img/reign.jpg" alt=""><h5>Dr. Reign Princess Vicente</h5><span>Dental Surgeon</span></div>
+    <div class="doc-card"><img src="assets/img/chris.jpg" alt=""><h5>Dr. Christopher John Cruz</h5><span>Orthodontist</span></div>
+    <div class="doc-card"><img src="assets/img/lim.jpg" alt=""><h5>Dr. Rhainier Lim</h5><span>Cosmetic Dentist</span></div>
+    <div class="doc-card"><img src="assets/img/steph.jpg" alt=""><h5>Dr. Stephanie Estadarte</h5><span>Implant Surgeon</span></div>
   </div>
 </section>
 
@@ -681,11 +683,11 @@
 
   <div class="testi-grid">
     <div class="testi-card">
-      <img src="assets/img/landing/client-1.jpg" alt="">
+      <img src="assets/img/testimonial_1.png" alt="">
       <p>Great service and professional staff. Highly recommended!</p>
     </div>
     <div class="testi-card">
-      <img src="assets/img/landing/client-2.jpg" alt="">
+      <img src="assets/img/testimonial_2.png" alt="">
       <p>Modern clinic and friendly team. I will return for checkups.</p>
     </div>
   </div>
@@ -694,7 +696,7 @@
 <!-- FORM CTA -->
 <section class="section container reveal">
   <div class="form-cta">
-    <img src="assets/img/landing/form-cta.jpg" alt="">
+    <img src="assets/img/doctors_2.jpg" alt="">
     <div>
       <h2>Are you still not sure?</h2>
       <p style="font-size:16px;opacity:.95;line-height:1.6">
@@ -715,7 +717,7 @@
     <div>📍 11 Capt. Cruz St., Malinta, Valenzuela City</div>
     <div>📞 8277-7424 / 0917-517-5306</div>
     <div>✉️ happyteeth@gmail.com</div>
-    <div>🕒 Mon-Fri: 08:00-20:00 • Sat: 09:00-18:00 • Sun: 09:00-18:00</div>
+    <div>🕒 Mon-Fri: 08:00-20:00 • Sat: 09:00-18:00</div>
   </div>
 </section>
 
