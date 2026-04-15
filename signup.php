@@ -5,38 +5,44 @@ require __DIR__ . "/db.php";
 $error = "";
 $success = "";
 
+// If already logged in, redirect
+if (!empty($_SESSION["user"]["role"])) {
+    $role = $_SESSION["user"]["role"];
+    if ($role === "admin" || $role === "staff") {
+        header("Location: /happy-teeth/dashboards/admin.php");
+    } elseif ($role === "dentist") {
+        header("Location: /happy-teeth/dashboards/dentist.php");
+    } else {
+        header("Location: /happy-teeth/dashboards/patient.php");
+    }
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = trim($_POST["name"] ?? "");
     $email = trim($_POST["email"] ?? "");
     $password = $_POST["password"] ?? "";
-    $confirm = $_POST["confirm_password"] ?? "";
 
-    if ($name === "" || $email === "" || $password === "" || $confirm === "") {
-        $error = "All fields are required.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = "Please enter a valid email.";
-    } elseif (strlen($password) < 6) {
-        $error = "Password must be at least 6 characters.";
-    } elseif ($password !== $confirm) {
-        $error = "Passwords do not match.";
+    $role = "patient";
+
+    if ($name === "" || $email === "" || $password === "") {
+        $error = "Name, email, and password are required.";
     } else {
-        // Check email already exists
-        $stmt = $conn->prepare("SELECT id FROM users WHERE email=? LIMIT 1");
+        $stmt = $conn->prepare("SELECT id FROM users WHERE email = ? LIMIT 1");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $exists = $stmt->get_result()->fetch_assoc();
 
         if ($exists) {
-            $error = "Email is already registered. Please login.";
+            $error = "Email is already registered.";
         } else {
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $role = "patient";
 
             $stmt = $conn->prepare("INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $name, $email, $hash, $role);
             $stmt->execute();
 
-            $success = "Account created! You can now login.";
+            $success = "Account created! You can now log in.";
         }
     }
 }
@@ -45,35 +51,89 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Sign Up - Happy Teeth</title>
+  <title>Sign up - Happy Teeth</title>
+  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
 </head>
-<body>
-  <h1>Patient Sign Up</h1>
+<body class="authPage">
 
-  <?php if ($error): ?>
-    <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
-  <?php endif; ?>
+  <header class="authTopbar">
+    <div class="authBrand2">
+      <div class="authLogoMark">
+        <img
+            src="/happy-teeth/assets/img/logo.png"
+            alt="Happy Teeth"
+            style="width:100%; height:100%; object-fit:contain; display:block;"
+          />
+      </div>
+      <div>
+        Happy Teeth
+        <small>Dental Clinic</small>
+      </div>
+    </div>
 
-  <?php if ($success): ?>
-    <p style="color:green;"><?php echo htmlspecialchars($success); ?></p>
-  <?php endif; ?>
+    <nav class="authNav">
+      <a href="/happy-teeth/index.php">Home</a>
+      <a href="/happy-teeth/index.php#about">About Us</a>
+      <a href="/happy-teeth/index.php#services">Services</a>
+      <a href="/happy-teeth/index.php#testimonials">Testimonials</a>
+      <a href="/happy-teeth/index.php#contact">Contact</a>
+    </nav>
 
-  <form method="post" action="signup.php" autocomplete="off">
-    <label>Full Name</label><br />
-    <input type="text" name="name" required /><br /><br />
+    <div class="authNavRight">
+      <a class="authBtnGhost" href="/happy-teeth/login.php">Login</a>
+      <a class="authBtnPrimary" href="/happy-teeth/signup.php">Sign up</a>
+    </div>
+  </header>
 
-    <label>Email</label><br />
-    <input type="email" name="email" required /><br /><br />
+  <div class="authShell">
+    <section class="authHero">
+      <img class="authHero__img" src="/happy-teeth/assets/img/facility.jpg" alt="Happy Teeth clinic">
+      <div class="authHero__overlay"></div>
 
-    <label>Password</label><br />
-    <input type="password" name="password" required /><br /><br />
+      <div class="authQuote">
+        A healthy smile begins with a simple appointment.
+        <span class="authQuote__by">Happy Teeth Dental Clinic</span>
+      </div>
+    </section>
 
-    <label>Confirm Password</label><br />
-    <input type="password" name="confirm_password" required /><br /><br />
+    <section class="authPanel">
+      <h1 class="authH1">Create account</h1>
+      <p class="authLead">Sign up to book an appointment.</p>
 
-    <button type="submit">Create Account</button>
-  </form>
+      <?php if (!empty($success)): ?>
+        <div class="authMsg2 authMsg2--ok"><?php echo htmlspecialchars($success); ?></div>
+      <?php endif; ?>
 
-  <p>Already have an account? <a href="login.php">Login</a></p>
+      <?php if (!empty($error)): ?>
+        <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>
+      <?php endif; ?>
+
+      <div class="authDivider">Details</div>
+
+      <form method="post">
+        <div class="authField">
+          <span class="authField__icon">👤</span>
+          <input name="name" placeholder="Full name" required>
+        </div>
+
+        <div class="authField">
+          <span class="authField__icon">✉</span>
+          <input name="email" type="email" placeholder="Email" required>
+        </div>
+
+        <div class="authField">
+          <span class="authField__icon">🔒</span>
+          <input name="password" type="password" placeholder="Password" required>
+        </div>
+
+        <button class="authSubmit" type="submit">Sign up</button>
+
+        <div class="authBottomText">
+          Already have an account? <a href="/happy-teeth/login.php">Log in</a>
+        </div>
+      </form>
+    </section>
+  </div>
+
 </body>
 </html>
