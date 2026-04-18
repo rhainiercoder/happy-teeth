@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $dentist_id = (int)($_POST["dentist_id"] ?? 0);
       if ($dentist_id <= 0) {
         // simple fail-safe: redirect with no change
-        header("Location: /happy-teeth/pages/admin/appointments.php?err=choose_dentist");
+        header("Location: /qm/pages/admin/appointments.php?err=choose_dentist");
         exit;
       }
 
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
   }
 
-  header("Location: /happy-teeth/pages/admin/appointments.php");
+  header("Location: /qm/pages/admin/appointments.php");
   exit;
 }
 
@@ -93,7 +93,7 @@ $err = $_GET["err"] ?? "";
 <head>
   <meta charset="utf-8" />
   <title>Admin - Appointments</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>

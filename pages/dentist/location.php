@@ -19,7 +19,7 @@ function get_setting($conn, $k, $default = '') {
   return $r['v'] ?? $default;
 }
 
-$clinic_name = get_setting($conn, 'clinic_name', 'Happy Teeth Dental Clinic');
+$clinic_name = get_setting($conn, 'clinic_name', '123 Company Dental Clinic');
 $clinic_address = get_setting($conn, 'clinic_address', '');
 $clinic_phone = get_setting($conn, 'clinic_phone', '');
 $lat = get_setting($conn, 'clinic_lat', '14.5995');
@@ -31,7 +31,7 @@ $zoom = (int)get_setting($conn, 'clinic_map_zoom', 15);
 <head>
   <meta charset="utf-8" />
   <title>Location & Map - <?php echo h($clinic_name); ?></title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 
   <!-- Leaflet CSS (no integrity attribute to avoid blocking) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>

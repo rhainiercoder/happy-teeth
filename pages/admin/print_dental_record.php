@@ -37,7 +37,7 @@ $app_time = substr($rec['appointment_time'] ?? '',0,5);
 <head>
   <meta charset="utf-8" />
   <title>Dental Record #<?php echo h($rec['id']); ?></title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
   <style>
     /* Print layout basics — tuned for A4 when printed */
     @page { margin: 18mm; }
@@ -67,21 +67,21 @@ $app_time = substr($rec['appointment_time'] ?? '',0,5);
   <div class="print-controls">
     <button class="btn btn--dark" onclick="window.print()">Print</button>
     <!-- If you later add server-side PDF generation, link to it here -->
-    <a class="btn" href="/happy-teeth/pages/admin/reports.php">Back</a>
+    <a class="btn" href="/qm/pages/admin/reports.php">Back</a>
   </div>
 
   <div class="rec-wrap">
     <div class="clinic-header">
       <div class="clinic-left">
-        <strong>Happy Teeth Dental Clinic</strong><br>
-        123 Clinic Street, City<br>
-        Phone: (000) 000-0000<br>
+        <strong>123 Dental Clinic</strong><br>
+        #12345 St., Malinta, Valenzuela City<br>
+        Tel: 123 456 / 0912-345-6789<br>
         Issued: <?php echo h($issued); ?><br>
         Record ID: <?php echo h($rec['id']); ?>
       </div>
 
       <div class="clinic-right">
-        <img src="/happy-teeth/assets/img/logo.png" alt="Logo" style="height:64px;">
+        <img src="/qm/assets/img/logo.png" alt="Logo" style="height:64px;">
         <div style="margin-top:6px; font-weight:700;"><?php echo h($rec['dentist_name'] ?: ''); ?></div>
       </div>
     </div>
@@ -91,7 +91,7 @@ $app_time = substr($rec['appointment_time'] ?? '',0,5);
     <div class="section">
       <div class="patient-grid">
         <div><strong>Patient:</strong> <?php echo h($rec['patient_name']); ?></div>
-        <div><strong>Age / Birthdate:</strong> <?php echo h($rec['age'] ?? ''); ?> / <?php echo h($rec['birthday'] ?? ''); ?></div>
+        
         <div><strong>Service:</strong> <?php echo h($rec['service']); ?></div>
         <div><strong>Appointment:</strong> <?php echo h($app_dt . ' ' . $app_time); ?></div>
         <div style="grid-column:1 / -1;"><strong>Diagnosis:</strong> <?php echo nl2br(h($rec['diagnosis'] ?? '')); ?></div>

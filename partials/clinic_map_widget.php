@@ -16,7 +16,7 @@ function get_setting_local($conn, $k, $default = '') {
 $lat = (float)get_setting_local($conn, 'clinic_lat', '14.5995');
 $lng = (float)get_setting_local($conn, 'clinic_lng', '120.9842');
 $zoom = (int)get_setting_local($conn, 'clinic_map_zoom', 15);
-$name = get_setting_local($conn, 'clinic_name', 'Happy Teeth Dental Clinic');
+$name = get_setting_local($conn, 'clinic_name', '123 Company Dental Clinic');
 $address = get_setting_local($conn, 'clinic_address', '');
 ?>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -110,7 +110,7 @@ $address = get_setting_local($conn, 'clinic_address', '');
   // Force size recalculation
   setTimeout(function(){ try { map.invalidateSize(); } catch(e){} }, 200);
 
-  var apiUrl = '/happy-teeth/pages/api/clinic_location.php';
+  var apiUrl = '/qm/pages/api/clinic_location.php';
   function fetchLocationAndUpdate() {
     fetch(apiUrl, { cache: 'no-store' })
       .then(function(resp){

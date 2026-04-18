@@ -83,7 +83,7 @@ for ($d = 1; $d <= 7; $d++) {
 <head>
   <meta charset="utf-8" />
   <title>Dentist Dashboard</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
   <style>
     /* local tweaks to match screenshot layout */
     .hours{ background:#fff; border-radius:12px; padding:8px; }
@@ -118,7 +118,7 @@ for ($d = 1; $d <= 7; $d++) {
     <section class="card">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
         <h2 class="sectionTitle" style="margin:0;">Your Operating Hours</h2>
-        <a class="btn" href="/happy-teeth/pages/dentist/settings.php" style="background:#e9f7ff; color:#0b2f4f;">Edit hours</a>
+        <a class="btn" href="/qm/pages/dentist/settings.php" style="background:#e9f7ff; color:#0b2f4f;">Edit hours</a>
       </div>
 
       <div class="hours">
@@ -156,7 +156,7 @@ for ($d = 1; $d <= 7; $d++) {
           <div class="table__row" style="grid-template-columns: 1.2fr .6fr 1fr .7fr;">
             <div class="patientCell">
               <div class="patientCell__icon">
-                <img src="/happy-teeth/assets/img/teeth_icon.png" alt=""
+                <img src="/qm/assets/img/teeth_icon.png" alt=""
                     style="width:22px;height:22px;object-fit:contain;display:block;">
               </div>
               <div>
@@ -170,7 +170,7 @@ for ($d = 1; $d <= 7; $d++) {
 
             <div style="text-align:right;">
               <a class="btn btn--dark"
-                 href="/happy-teeth/pages/dentist/dental-records.php?appointment_id=<?php echo (int)$r["id"]; ?>">
+                 href="/qm/pages/dentist/dental-records.php?appointment_id=<?php echo (int)$r["id"]; ?>">
                 Add Record
               </a>
             </div>

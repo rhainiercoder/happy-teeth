@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && ($_POST["action"] ?? "") === "save_
 
           $conn->commit();
 
-          header("Location: /happy-teeth/pages/dentist/dental-records.php?saved=1");
+          header("Location: /qm/pages/dentist/dental-records.php?saved=1");
           exit;
         } catch (Throwable $e) {
           $conn->rollback();
@@ -168,7 +168,7 @@ $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 <head>
   <meta charset="utf-8" />
   <title>Dentist - Dental Records</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>
@@ -233,7 +233,7 @@ $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         </label>
 
         <div style="display:flex; justify-content:flex-end; gap:10px;">
-          <a class="btn" style="background:#e9f7ff; color:#0b2f4f;" href="/happy-teeth/dashboards/dentist.php">Back to Dashboard</a>
+          <a class="btn" style="background:#e9f7ff; color:#0b2f4f;" href="/qm/dashboards/dentist.php">Back to Dashboard</a>
           <button class="btn btn--dark" type="submit">Save Record</button>
         </div>
       </form>

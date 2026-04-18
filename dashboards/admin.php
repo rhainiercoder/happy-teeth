@@ -176,7 +176,7 @@ try {
 <head>
   <meta charset="utf-8" />
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
   <?php include __DIR__ . "/../partials/sidebar.php"; ?>
@@ -295,7 +295,7 @@ try {
       </div>
 
       <div class="adminTransactions__actions">
-        <a class="btn btn--dark" href="/happy-teeth/pages/admin/transactions.php">View All Transactions</a>
+        <a class="btn btn--dark" href="/qm/pages/admin/transactions.php">View All Transactions</a>
       </div>
     </section>
   </main>

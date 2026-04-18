@@ -189,7 +189,7 @@ $pages = (int)ceil($total / $perPage);
 <head>
   <meta charset="utf-8" />
   <title>Admin - Dentists</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
   <style>
     /* small inline styles for availability rows layout (keeps file self-contained) */
     .avail-row { display:flex; gap:8px; align-items:center; margin-bottom:6px; }
@@ -292,7 +292,7 @@ $pages = (int)ceil($total / $perPage);
       <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:8px;">
         <?php if ($editing): ?>
           <button class="btn" type="submit" name="action" value="edit">Save</button>
-          <a class="btn" href="/happy-teeth/pages/admin/dentists.php">Cancel</a>
+          <a class="btn" href="/qm/pages/admin/dentists.php">Cancel</a>
         <?php else: ?>
           <button class="btn btn--dark" type="submit" name="action" value="add">Create Dentist</button>
         <?php endif; ?>

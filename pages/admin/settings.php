@@ -46,12 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
   }
   $flash = "Clinic settings saved.";
-  header("Location: /happy-teeth/pages/admin/settings.php?msg=" . urlencode($flash));
+  header("Location: /qm/pages/admin/settings.php?msg=" . urlencode($flash));
   exit;
 }
 
 // load current values
-$clinic_name = get_setting($conn, 'clinic_name', 'Happy Teeth Dental Clinic');
+$clinic_name = get_setting($conn, 'clinic_name', '123 Company Dental Clinic');
 $clinic_address = get_setting($conn, 'clinic_address', '');
 $clinic_phone = get_setting($conn, 'clinic_phone', '');
 $clinic_timezone = get_setting($conn, 'clinic_timezone', 'Asia/Manila');
@@ -67,7 +67,7 @@ $msg = $_GET['msg'] ?? '';
 <head>
   <meta charset="utf-8" />
   <title>Admin - Settings</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -124,7 +124,7 @@ $msg = $_GET['msg'] ?? '';
 
       <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:8px;">
         <button class="btn btn--dark" type="submit">Save</button>
-        <a class="btn" href="/happy-teeth/pages/admin/reports.php">Cancel</a>
+        <a class="btn" href="/qm/pages/admin/reports.php">Cancel</a>
       </div>
     </form>
   </section>

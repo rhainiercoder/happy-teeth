@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Happy Teeth Dental Clinic</title>
+  <title>123 Company Dental Clinic</title>
 
   <style>
     :root{
@@ -520,7 +520,7 @@
       <!-- Put your local logo here -->
       <img src="assets/img/logo.png" alt="logo"/>
       <div>
-        <div style="font-size:15px;color:#2a2a2a">Happy Teeth</div>
+        <div style="font-size:15px;color:#2a2a2a">123 Company</div>
         <div style="font-size:12px;color:#8a8a8a">Dental Clinic</div>
       </div>
     </div>
@@ -571,11 +571,11 @@
 <!-- ABOUT -->
 <section id="about" class="container about-strip reveal">
   <div class="about-card">
-    <img src="assets/img/faci_4.jpg" alt="">
+    <img src="assets/img/logo.png" alt="">
     <div>
-      <div style="color:#4b9bff;font-size:15px;font-weight:700">Happy Teeth Dental Clinic</div>
-      <div style="font-size:13px;color:#777">#11 Capt. Cruz St., Malinta, Valenzuela City</div>
-      <div style="font-size:13px;color:#777">Tel: 8277-7424 / 0917-517-5306</div>
+      <div style="color:#4b9bff;font-size:15px;font-weight:700">123 Company Dental Clinic</div>
+      <div style="font-size:13px;color:#777">#12345 St., Malinta, Valenzuela City</div>
+      <div style="font-size:13px;color:#777">Tel: 1234-5678 / 0912-345-6789</div>
     </div>
   </div>
 
@@ -714,9 +714,9 @@
 <!-- CONTACTS / MAP --> <section id="contacts" class="section container reveal"> <?php require_once __DIR__ . "/partials/clinic_map_widget.php"; ?>
 
   <div class="contact-box">
-    <div>📍 11 Capt. Cruz St., Malinta, Valenzuela City</div>
-    <div>📞 8277-7424 / 0917-517-5306</div>
-    <div>✉️ happyteeth@gmail.com</div>
+    <div>📍 12345 St., Malinta, Valenzuela City</div>
+    <div>📞 1234-5678 / 0912-345-6789</div>
+    <div>✉️ 123company@gmail.com</div>
     <div>🕒 Mon-Fri: 08:00-20:00 • Sat: 09:00-18:00</div>
   </div>
 </section>
@@ -727,12 +727,12 @@
     <div class="brand">
       <img src="assets/img/logo.png" alt="logo"/>
       <div>
-        <div style="font-size:15px;color:#2a2a2a">Happy Teeth</div>
+        <div style="font-size:15px;color:#2a2a2a">123 Company</div>
         <div style="font-size:12px;color:#8a8a8a">Dental Clinic</div>
       </div>
     </div>
 
-    <div style="font-size:14px;color:#6f6f6f">© 2026 Happy Teeth Dental Clinic</div>
+    <div style="font-size:14px;color:#6f6f6f">© 2026 123 Company Dental Clinic</div>
 
     <a class="btn primary" href="#contacts">Make Appointment</a>
   </div>

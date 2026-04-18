@@ -9,11 +9,11 @@ $success = "";
 if (!empty($_SESSION["user"]["role"])) {
     $role = $_SESSION["user"]["role"];
     if ($role === "admin" || $role === "staff") {
-        header("Location: /happy-teeth/dashboards/admin.php");
+        header("Location: /qm/dashboards/admin.php");
     } elseif ($role === "dentist") {
-        header("Location: /happy-teeth/dashboards/dentist.php");
+        header("Location: /qm/dashboards/dentist.php");
     } else {
-        header("Location: /happy-teeth/dashboards/patient.php");
+        header("Location: /qm/dashboards/patient.php");
     }
     exit;
 }
@@ -51,8 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Sign up - Happy Teeth</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <title>Sign up - 123 Company</title>
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body class="authPage">
 
@@ -60,39 +60,39 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="authBrand2">
       <div class="authLogoMark">
         <img
-            src="/happy-teeth/assets/img/logo.png"
-            alt="Happy Teeth"
+            src="/qm/assets/img/logo.png"
+            alt="123 Company"
             style="width:100%; height:100%; object-fit:contain; display:block;"
           />
       </div>
       <div>
-        Happy Teeth
+        123 Company
         <small>Dental Clinic</small>
       </div>
     </div>
 
     <nav class="authNav">
-      <a href="/happy-teeth/index.php">Home</a>
-      <a href="/happy-teeth/index.php#about">About Us</a>
-      <a href="/happy-teeth/index.php#services">Services</a>
-      <a href="/happy-teeth/index.php#testimonials">Testimonials</a>
-      <a href="/happy-teeth/index.php#contact">Contact</a>
+      <a href="/qm/index.php">Home</a>
+      <a href="/qm/index.php#about">About Us</a>
+      <a href="/qm/index.php#services">Services</a>
+      <a href="/qm/index.php#testimonials">Testimonials</a>
+      <a href="/qm/index.php#contact">Contact</a>
     </nav>
 
     <div class="authNavRight">
-      <a class="authBtnGhost" href="/happy-teeth/login.php">Login</a>
-      <a class="authBtnPrimary" href="/happy-teeth/signup.php">Sign up</a>
+      <a class="authBtnGhost" href="/qm/login.php">Login</a>
+      <a class="authBtnPrimary" href="/qm/signup.php">Sign up</a>
     </div>
   </header>
 
   <div class="authShell">
     <section class="authHero">
-      <img class="authHero__img" src="/happy-teeth/assets/img/facility.jpg" alt="Happy Teeth clinic">
+      <img class="authHero__img" src="/qm/assets/img/facility.jpg" alt="123 Company Dental Clinic">
       <div class="authHero__overlay"></div>
 
       <div class="authQuote">
         A healthy smile begins with a simple appointment.
-        <span class="authQuote__by">Happy Teeth Dental Clinic</span>
+        <span class="authQuote__by">123 Company Dental Clinic</span>
       </div>
     </section>
 
@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button class="authSubmit" type="submit">Sign up</button>
 
         <div class="authBottomText">
-          Already have an account? <a href="/happy-teeth/login.php">Log in</a>
+          Already have an account? <a href="/qm/login.php">Log in</a>
         </div>
       </form>
     </section>

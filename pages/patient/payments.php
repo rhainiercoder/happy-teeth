@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'pay')
 
     // optional: mark appointment as paid / approved depending on workflow
   }
-  header("Location: /happy-teeth/pages/patient/payments.php?ok=" . urlencode($ok));
+  header("Location: /qm/pages/patient/payments.php?ok=" . urlencode($ok));
   exit;
 }
 
@@ -48,7 +48,7 @@ $ok = $_GET['ok'] ?? $ok;
 <head>
   <meta charset="utf-8" />
   <title>Payment History</title>
-  <link rel="stylesheet" href="/happy-teeth/assets/css/style.css">
+  <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>

@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 function require_login(): array {
     if (empty($_SESSION["user"]) || empty($_SESSION["user"]["id"])) {
-        header("Location: /happy-teeth/login.php");
+        header("Location: /qm/login.php");
         exit;
     }
     return $_SESSION["user"];
