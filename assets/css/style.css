@@ -42,7 +42,13 @@ body{
   border-bottom:1px solid rgba(255,255,255,.12);
 }
 
-.sidebar__logo{ font-weight:800; font-size:18px; }
+.sidebarLogo {
+  font-weight:800; 
+  font-size:18px;
+  max-width: 40px;
+  max-height: 40px;
+}
+
 .sidebar__sub{ opacity:.9; font-size:12px; margin-top:2px; }
 
 .sidebar__nav{
