@@ -45,8 +45,8 @@ body{
 .sidebarLogo {
   font-weight:800; 
   font-size:18px;
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .sidebar__sub{ opacity:.9; font-size:12px; margin-top:2px; }
@@ -787,7 +787,11 @@ body{
   border-radius:16px;
   box-shadow: 0 12px 24px rgba(0,0,0,.12);
 }
-.authBrand__logo{ font-weight:900; font-size:20px; }
+.authBrand__logo{ 
+  font-weight:900; 
+  font-size:20px; 
+  align-items:center;
+}
 .authBrand__sub{ opacity:.9; font-size:12px; margin-top:2px; }
 
 .authMenu{
