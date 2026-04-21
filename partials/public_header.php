@@ -34,10 +34,10 @@ function topnav_active(string $key, string $active): string {
       <img
         class="topnav__brandImg"
         src="/qm/assets/img/logo.png"
-        alt="123 Company logo"
+        alt="ZNS logo"
       />
       <div>
-        <span class="topnav__brandTitle">123 Company</span>
+        <span class="topnav__brandTitle">ZNS</span>
         <span class="topnav__brandSub">Dental Clinic</span>
       </div>
     </a>

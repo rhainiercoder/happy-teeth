@@ -17,7 +17,7 @@ function get_setting($conn, $k, $default = '') {
 $lat = get_setting($conn, 'clinic_lat', '14.5995');
 $lng = get_setting($conn, 'clinic_lng', '120.9842');
 $zoom = (int)get_setting($conn, 'clinic_map_zoom', 15);
-$name = get_setting($conn, 'clinic_name', '123 Company Dental Clinic');
+$name = get_setting($conn, 'clinic_name', 'ZNS Dental Clinic');
 $address = get_setting($conn, 'clinic_address', '');
 
 echo json_encode([

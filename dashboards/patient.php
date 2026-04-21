@@ -71,7 +71,7 @@ $fallbackServiceImg = "teeth_icon.png";
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Patient Dashboard - 123 Company</title>
+  <title>Patient Dashboard - ZNS Demtal Clinic</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
@@ -83,7 +83,7 @@ $fallbackServiceImg = "teeth_icon.png";
     <!-- Hero -->
     <section class="pHero">
       <div>
-        <h1>Welcome to 123 Company<br>Dental Clinic</h1>
+        <h1>Welcome to ZNS<br>Dental Clinic</h1>
         <h2><?php echo h($user["name"]); ?>!</h2>
         <p>Your smile, Our Priority.</p>
 
@@ -99,11 +99,11 @@ $fallbackServiceImg = "teeth_icon.png";
       <div class="pOrb" aria-hidden="true">
         <div class="ring"></div>
         <div class="ring"></div>
-        <div class="pLogoShape" aria-label="123 Company logo">
+        <div class="pLogoShape" aria-label="ZNS logo">
           <img
             class="pLogoImg"
             src="/qm/assets/img/logo.png"
-            alt="123 Company"
+            alt="ZNS logo"
             style="width:100%; height:100%; object-fit:contain; display:block;"
           />
         </div>

@@ -8,7 +8,7 @@ $active = $active ?? ""; // e.g. "home", "about", "services", "testimonials", "c
 <header class="topnav">
   <div class="topnav__inner">
     <a class="topnav__brand" href="/qm/index.php">
-      <span class="topnav__brandTitle">123 Company</span>
+      <span class="topnav__brandTitle">ZNS</span>
       <span class="topnav__brandSub">Dental Clinic</span>
     </a>
 

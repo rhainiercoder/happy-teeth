@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Sign up - 123 Company</title>
+  <title>Sign up - ZNS Dental Clinic</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body class="authPage">
@@ -61,12 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <div class="authLogoMark">
         <img
             src="/qm/assets/img/logo.png"
-            alt="123 Company"
+            alt="ZNS Dental Clinic"
             style="width:100%; height:100%; object-fit:contain; display:block;"
           />
       </div>
       <div>
-        123 Company
+        ZNS
         <small>Dental Clinic</small>
       </div>
     </div>
@@ -87,12 +87,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <div class="authShell">
     <section class="authHero">
-      <img class="authHero__img" src="/qm/assets/img/facility.jpg" alt="123 Company Dental Clinic">
+      <img class="authHero__img" src="/qm/assets/img/facility.jpg" alt="ZNS Dental Clinic">
       <div class="authHero__overlay"></div>
 
       <div class="authQuote">
-        A healthy smile begins with a simple appointment.
-        <span class="authQuote__by">123 Company Dental Clinic</span>
+        Elevating Standards, One Smile at a Time.
+        <span class="authQuote__by">ZNS Dental Clinic</span>
       </div>
     </section>
 

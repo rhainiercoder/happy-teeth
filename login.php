@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Login - 123 Company</title>
+  <title>Login - ZNS Dental Clinic</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body class="authPage">
@@ -56,12 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <div class="authLogoMark">
         <img
             src="/qm/assets/img/logo.png"
-            alt="123 Company"
+            alt="ZNS Dental Clinic"
             style="width:100%; height:100%; object-fit:contain; display:block;"
           />
       </div>
       <div>
-        123 Company
+        ZNS
         <small>Dental Clinic</small>
       </div>
     </div>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <div class="authShell">
     <section class="authHero">
-      <img class="authHero__img" src="/qm/assets/img/facility_2.jpg" alt="123 Company Dental Clinic">
+      <img class="authHero__img" src="/qm/assets/img/facility_2.jpg" alt="ZNS Dental Clinic">
       <div class="authHero__overlay"></div>
 
       <div class="authQuote">
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <section class="authPanel">
       <h1 class="authH1">Welcome Back</h1>
-      <p class="authLead">Discover a better way of appointments with 123 Company.</p>
+      <p class="authLead">Discover a better way of appointments with ZNS Dental Clinic.</p>
 
       <?php if (!empty($error)): ?>
         <div class="authMsg2 authMsg2--error"><?php echo htmlspecialchars($error); ?></div>

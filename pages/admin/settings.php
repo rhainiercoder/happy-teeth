@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // load current values
-$clinic_name = get_setting($conn, 'clinic_name', '123 Company Dental Clinic');
+$clinic_name = get_setting($conn, 'clinic_name', 'ZNS Dental Clinic');
 $clinic_address = get_setting($conn, 'clinic_address', '');
 $clinic_phone = get_setting($conn, 'clinic_phone', '');
 $clinic_timezone = get_setting($conn, 'clinic_timezone', 'Asia/Manila');

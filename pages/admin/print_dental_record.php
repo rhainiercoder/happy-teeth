@@ -73,7 +73,7 @@ $app_time = substr($rec['appointment_time'] ?? '',0,5);
   <div class="rec-wrap">
     <div class="clinic-header">
       <div class="clinic-left">
-        <strong>123 Dental Clinic</strong><br>
+        <strong>ZNS Dental Clinic</strong><br>
         #12345 St., Malinta, Valenzuela City<br>
         Tel: 123 456 / 0912-345-6789<br>
         Issued: <?php echo h($issued); ?><br>

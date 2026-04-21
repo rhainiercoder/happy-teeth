@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>123 Company Dental Clinic</title>
+  <title>ZNS Dental Clinic</title>
 
   <style>
     :root{
@@ -508,6 +508,7 @@
       }
       .hero h1{font-size:42px}
       .contact-box{grid-template-columns:1fr}
+    
     }
   </style>
 </head>
@@ -520,7 +521,7 @@
       <!-- Put your local logo here -->
       <img src="assets/img/logo.png" alt="logo"/>
       <div>
-        <div style="font-size:15px;color:#2a2a2a">123 Company</div>
+        <div style="font-size:15px;color:#2a2a2a">ZNS</div>
         <div style="font-size:12px;color:#8a8a8a">Dental Clinic</div>
       </div>
     </div>
@@ -551,7 +552,7 @@
 
   <div class="container hero-grid">
     <div>
-      <h1>High‑quality and<br/>painless <span>dentistry</span></h1>
+      <h1>Elevating Standars<br/>One Step <span>At a Time</span></h1>
       <p>
         We offer a full range of services and an integrated approach to solving any problems, and this is a guarantee of healthy teeth and oral cavity for all family members.
       </p>
@@ -573,7 +574,7 @@
   <div class="about-card">
     <img src="assets/img/logo.png" alt="">
     <div>
-      <div style="color:#4b9bff;font-size:15px;font-weight:700">123 Company Dental Clinic</div>
+      <div style="color:#4b9bff;font-size:15px;font-weight:700">ZNS Dental Clinic</div>
       <div style="font-size:13px;color:#777">#12345 St., Malinta, Valenzuela City</div>
       <div style="font-size:13px;color:#777">Tel: 1234-5678 / 0912-345-6789</div>
     </div>
@@ -664,10 +665,8 @@
 
   <div class="doctors">
     <div class="doc-card"><img src="assets/img/jian.jpg" alt=""><h5>Dr. Jian Carlo Rañola</h5><span>Implant Surgeon</span></div>
-    <div class="doc-card"><img src="assets/img/reign.jpg" alt=""><h5>Dr. Reign Princess Vicente</h5><span>Dental Surgeon</span></div>
+    <div class="doc-card"><img src="assets/img/dr_salamante.jpg" alt=""><h5>Dr. Paula Glenn Z. Salamante</h5><span>General Dentist</span></div>
     <div class="doc-card"><img src="assets/img/chris.jpg" alt=""><h5>Dr. Christopher John Cruz</h5><span>Orthodontist</span></div>
-    <div class="doc-card"><img src="assets/img/lim.jpg" alt=""><h5>Dr. Rhainier Lim</h5><span>Cosmetic Dentist</span></div>
-    <div class="doc-card"><img src="assets/img/steph.jpg" alt=""><h5>Dr. Stephanie Estadarte</h5><span>Implant Surgeon</span></div>
   </div>
 </section>
 
@@ -714,9 +713,8 @@
 <!-- CONTACTS / MAP --> <section id="contacts" class="section container reveal"> <?php require_once __DIR__ . "/partials/clinic_map_widget.php"; ?>
 
   <div class="contact-box">
-    <div>📍 12345 St., Malinta, Valenzuela City</div>
-    <div>📞 1234-5678 / 0912-345-6789</div>
-    <div>✉️ 123company@gmail.com</div>
+    <div>📍 181 Mc Arthur Highway Dalandanan, Valenzuela, Philippines, 1443</div>
+    <div>📞 0932 162 7663</div>
     <div>🕒 Mon-Fri: 08:00-20:00 • Sat: 09:00-18:00</div>
   </div>
 </section>
@@ -727,12 +725,12 @@
     <div class="brand">
       <img src="assets/img/logo.png" alt="logo"/>
       <div>
-        <div style="font-size:15px;color:#2a2a2a">123 Company</div>
+        <div style="font-size:15px;color:#2a2a2a">ZNS</div>
         <div style="font-size:12px;color:#8a8a8a">Dental Clinic</div>
       </div>
     </div>
 
-    <div style="font-size:14px;color:#6f6f6f">© 2026 123 Company Dental Clinic</div>
+    <div style="font-size:14px;color:#6f6f6f">© 2026 ZNS Dental Clinic</div>
 
     <a class="btn primary" href="#contacts">Make Appointment</a>
   </div>

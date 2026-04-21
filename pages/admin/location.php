@@ -19,7 +19,7 @@ function get_setting($conn, $k, $default = '') {
   return $r['v'] ?? $default;
 }
 
-$clinic_name = get_setting($conn, 'clinic_name', '123 Cmpany Dental Clinic');
+$clinic_name = get_setting($conn, 'clinic_name', 'ZNS Dental Clinic');
 $clinic_address = get_setting($conn, 'clinic_address', '');
 $clinic_phone = get_setting($conn, 'clinic_phone', '');
 $lat = get_setting($conn, 'clinic_lat', '14.5995');

@@ -45,7 +45,7 @@ $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>My Dental Records - 123 Company</title>
+  <title>My Dental Records - ZNS Dental Clinic</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
 </head>
 <body>
