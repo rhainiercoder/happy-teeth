@@ -387,15 +387,6 @@
 
     .testi-card p{ font-size:16px; line-height:1.7; }
 
-    .testi-card img{
-      width:36px;
-      height:36px;
-      border-radius:50%;
-      margin-bottom:8px;
-      object-fit:cover;
-      background:#fff;
-    }
-
     .form-cta{
       background:var(--cta-grad);
       color:#fff;
@@ -508,7 +499,33 @@
       }
       .hero h1{font-size:42px}
       .contact-box{grid-template-columns:1fr}
-    
+    }
+    #doctors .doctors { 
+      display: grid !important; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 280px)); 
+      justify-content: center; 
+      gap: 28px; 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 0 12px; 
+      box-sizing: border-box; 
+      align-items: start; 
+      width: 100%; 
+    }
+
+    @media (max-width: 980px) { 
+      #doctors .doctors { 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+        gap: 20px; 
+      } 
+    }
+
+    @media (max-width: 520px) { 
+      #doctors .doctors { 
+        grid-template-columns: 1fr; 
+        gap: 16px; 
+        padding: 0 8px; 
+      } 
     }
   </style>
 </head>
@@ -552,7 +569,7 @@
 
   <div class="container hero-grid">
     <div>
-      <h1>Elevating Standars<br/>One Step <span>At a Time</span></h1>
+      <h1>Elevating Standard<br/>One Step <span>At a Time</span></h1>
       <p>
         We offer a full range of services and an integrated approach to solving any problems, and this is a guarantee of healthy teeth and oral cavity for all family members.
       </p>
@@ -561,9 +578,9 @@
 
     <div class="img-collage">
       <!-- Replace with your local images -->
-      <img src="assets/img/doctors.jpg" alt="">
+      <img src="assets/img/service_2.jpg" alt="">
       <img src="assets/img/service_1.jpg" alt="">
-      <img src="assets/img/facility.jpg" alt="">
+      <img src="assets/img/facility_1.jpg" alt="">
       <img src="assets/img/faci_4.jpg" alt="">
     </div>
   </div>
@@ -575,8 +592,8 @@
     <img src="assets/img/logo.png" alt="">
     <div>
       <div style="color:#4b9bff;font-size:15px;font-weight:700">ZNS Dental Clinic</div>
-      <div style="font-size:13px;color:#777">#12345 St., Malinta, Valenzuela City</div>
-      <div style="font-size:13px;color:#777">Tel: 1234-5678 / 0912-345-6789</div>
+      <div style="font-size:13px;color:#777">181 Mc Arthur Highway Dalandanan, Valenzuela City</div>
+      <div style="font-size:13px;color:#777">Tel: 0932 162 7663</div>
     </div>
   </div>
 
@@ -652,7 +669,7 @@
       <br>
       <a class="btn light" href="#contacts">Make Appointment</a>
     </div>
-    <img src="assets/img/doctors_4.jpg" alt="">
+    <img src="assets/img/clinic_front.jpg" alt="">
   </div>
 </section>
 
@@ -660,13 +677,13 @@
 <section id="doctors" class="section container reveal">
   <div class="section-title">
     <h3>DOCTORS</h3>
-    <h2>Meet our qualified dentists</h2>
+    <h2>Meet the Crew</h2>
   </div>
 
   <div class="doctors">
-    <div class="doc-card"><img src="assets/img/jian.jpg" alt=""><h5>Dr. Jian Carlo Rañola</h5><span>Implant Surgeon</span></div>
+    <div class="doc-card"><img src="assets/img/ms_joy.jpg" alt=""><h5>Ms. Joy</h5><span>Assistant</span></div>
     <div class="doc-card"><img src="assets/img/dr_salamante.jpg" alt=""><h5>Dr. Paula Glenn Z. Salamante</h5><span>General Dentist</span></div>
-    <div class="doc-card"><img src="assets/img/chris.jpg" alt=""><h5>Dr. Christopher John Cruz</h5><span>Orthodontist</span></div>
+    <div class="doc-card"><img src="assets/img/ms_adele.jpg" alt=""><h5>Ms. Adele</h5><span>Assistant</span></div>
   </div>
 </section>
 
@@ -682,12 +699,10 @@
 
   <div class="testi-grid">
     <div class="testi-card">
-      <img src="assets/img/testimonial_1.png" alt="">
-      <p>Great service and professional staff. Highly recommended!</p>
+      <p>The best dental clinic in Valenzuela City with a very accommodating staffs. Dra. Glenn is a proficient and informative dentist that can treat your dental problems gently and without anything to worry about. Highly recommended!!!</p>
     </div>
     <div class="testi-card">
-      <img src="assets/img/testimonial_2.png" alt="">
-      <p>Modern clinic and friendly team. I will return for checkups.</p>
+      <p>Clinic is well-sanitized and disinfected all throughout. Doc Paula is the best dentist I’ve gone to. She has very gentle but sturdy hands during procedures, and is very caring and informative too. Highly recommended!</p>
     </div>
   </div>
 </section>
@@ -695,7 +710,7 @@
 <!-- FORM CTA -->
 <section class="section container reveal">
   <div class="form-cta">
-    <img src="assets/img/doctors_2.jpg" alt="">
+    <img src="assets/img/banner.jpg" alt="">
     <div>
       <h2>Are you still not sure?</h2>
       <p style="font-size:16px;opacity:.95;line-height:1.6">
@@ -713,7 +728,7 @@
 <!-- CONTACTS / MAP --> <section id="contacts" class="section container reveal"> <?php require_once __DIR__ . "/partials/clinic_map_widget.php"; ?>
 
   <div class="contact-box">
-    <div>📍 181 Mc Arthur Highway Dalandanan, Valenzuela, Philippines, 1443</div>
+    <div>📍 181 Mc Arthur Highway Dalandanan, Valenzuela City</div>
     <div>📞 0932 162 7663</div>
     <div>🕒 Mon-Fri: 08:00-20:00 • Sat: 09:00-18:00</div>
   </div>
