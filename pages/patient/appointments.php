@@ -56,6 +56,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && empty($_POST["action"])) {
   if ($time === "") $errors[] = "Time is required.";
 
   if (!$errors) {
+    date_default_timezone_set('Asia/Manila'); // adjust if needed
+
+    $today = date('Y-m-d');
+    $nowHM = date('H:i');
+
+    $appointment_date = $_POST['appointment_date'] ?? '';
+    $appointment_time = $_POST['appointment_time'] ?? '';
+
+    if (!$appointment_date || !$appointment_time) {
+      $error = "Please select an appointment date and time.";
+    } else {
+      if ($appointment_date < $today) {
+        $error = "You cannot book an appointment in the past.";
+      } elseif ($appointment_date === $today) {
+        // block past time today
+        // (optional) add a buffer so they can't book "right now"
+        $bufferMinutes = 0; // change to 15 if you want
+        $nowPlusBuffer = date('H:i', time() + ($bufferMinutes * 60));
+
+        if ($appointment_time <= $nowPlusBuffer) {
+          $error = "You cannot book a past time for today.";
+        }
+      }
+    }
+
+    if (!empty($error)) {
+      // stop the insert and show message
+      // (if you redirect, store error in session instead)
+    }
     $stmt = $conn->prepare("
       INSERT INTO appointments (patient_id, service_id, appointment_date, appointment_time, status, note)
       VALUES (?, ?, ?, ?, 'pending', ?)
@@ -130,13 +159,13 @@ $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
         <label>
           <div style="font-weight:900; color:#0b2f4f; margin-bottom:6px;">Date</div>
-          <input type="date" name="appointment_date" required
+          <input type="date" id="apptDate" name="appointment_date" requiredmin="<?php echo date('Y-m-d'); ?>"
             style="width:100%; padding:10px; border-radius:12px; border:1px solid rgba(11,31,42,.15);">
         </label>
 
         <label>
           <div style="font-weight:900; color:#0b2f4f; margin-bottom:6px;">Time</div>
-          <input type="time" name="appointment_time" required
+          <input type="time" id="apptTime" name="appointment_time" required
             style="width:100%; padding:10px; border-radius:12px; border:1px solid rgba(11,31,42,.15);">
         </label>
       </div>
@@ -194,6 +223,37 @@ $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
       <?php endif; ?>
     </div>
   </section>
+  <script>
+(function () {
+  const d = document.getElementById('apptDate');
+  const t = document.getElementById('apptTime');
+  if (!d || !t) return;
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function nowHM(){
+    const x = new Date();
+    return `${pad(x.getHours())}:${pad(x.getMinutes())}`;
+  }
+
+  function updateMinTime() {
+    const today = new Date();
+    const todayStr = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+
+    if (d.value === todayStr) {
+      t.min = nowHM();      // optional buffer can be applied here
+    } else {
+      t.min = "";
+    }
+
+    if (t.value && t.min && t.value < t.min) {
+      t.value = "";
+    }
+  }
+
+  d.addEventListener('change', updateMinTime);
+  updateMinTime();
+})();
+</script>
 </main>
 </body>
 </html>
