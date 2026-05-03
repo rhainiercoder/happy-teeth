@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img
             src="/qm/assets/img/logo.png"
             alt="ZNS Dental Clinic"
-            style="width:100%; height:100%; object-fit:contain; display:block;"
           />
       </div>
       <div>

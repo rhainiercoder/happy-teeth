@@ -21,40 +21,6 @@ $address = get_setting_local($conn, 'clinic_address', '');
 ?>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-<style>
-/* Center the widget and keep it responsive */
-.clinic-widget {
-  max-width: 920px;
-  margin: 0 auto;
-  text-align: left;
-}
-.clinic-widget .widget-head {
-  display: flex;
-  justify-content: center; /* center title horizontally */
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-.clinic-widget h3 {
-  margin: 0;
-  text-align: center;
-}
-#clinicMapWidget {
-  height: 360px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  margin-top: 8px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.clinic-widget .meta {
-  margin-top: 8px;
-  text-align: center;
-  color: #333;
-}
-.clinic-widget .meta .addr { color:#666; font-size:13px; }
-</style>
-
 <div class="card clinic-widget">
   <div class="widget-head">
     <h3>Clinic location</h3>

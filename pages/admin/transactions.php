@@ -125,7 +125,6 @@ $msg = $_GET['msg'] ?? '';
   <meta charset="utf-8" />
   <title>Admin - Transactions</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
-  <style>.tx-row{display:flex;justify-content:space-between;align-items:center;padding:10px 8px;border-bottom:1px solid rgba(11,31,42,.06)}</style>
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>

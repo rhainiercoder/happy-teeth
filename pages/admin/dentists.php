@@ -190,15 +190,6 @@ $pages = (int)ceil($total / $perPage);
   <meta charset="utf-8" />
   <title>Admin - Dentists</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
-  <style>
-    /* small inline styles for availability rows layout (keeps file self-contained) */
-    .avail-row { display:flex; gap:8px; align-items:center; margin-bottom:6px; }
-    .avail-row select, .avail-row input[type="time"] { padding:8px 10px; border-radius:10px; border:1px solid rgba(11,31,42,.10); font-weight:800; }
-    .avail-actions { display:flex; gap:8px; align-items:center; }
-    .avail-remove { background:#e64545; color:#fff; border-radius:10px; padding:6px 10px; border:0; cursor:pointer; }
-    .avail-add { background:#0b2f4f; color:#fff; border-radius:10px; padding:8px 10px; border:0; cursor:pointer; }
-    .small-muted{ font-weight:800; opacity:.8; font-size:13px; }
-  </style>
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>

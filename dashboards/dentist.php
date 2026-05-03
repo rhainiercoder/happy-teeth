@@ -84,19 +84,6 @@ for ($d = 1; $d <= 7; $d++) {
   <meta charset="utf-8" />
   <title>Dentist Dashboard</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
-  <style>
-    /* local tweaks to match screenshot layout */
-    .hours{ background:#fff; border-radius:12px; padding:8px; }
-    .hours__row{ display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 16px; border-top:1px solid rgba(11,31,42,.06); }
-    .hours__row:first-child{ border-top:0; }
-    .hours__left{ display:flex; gap:12px; align-items:center; font-weight:900; color:#0b2f4f; }
-    .hours__right{ font-weight:900; color:#0b2f4f; }
-    .hours__icon{ width:34px; height:34px; border-radius:12px; background:var(--accent-light); display:flex; align-items:center; justify-content:center; }
-    .small-muted{ font-weight:800; opacity:.8; font-size:13px; }
-    @media (max-width: 920px){
-      .hours__row{ flex-direction:row; }
-    }
-  </style>
 </head>
 <body>
   <?php include __DIR__ . "/../partials/sidebar.php"; ?>

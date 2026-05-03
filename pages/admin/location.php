@@ -35,11 +35,6 @@ $zoom = (int)get_setting($conn, 'clinic_map_zoom', 15);
 
   <!-- Leaflet CSS (no integrity attribute to avoid blocking) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-  <style>
-    #clinicMap { height:420px; border:1px solid #ddd; border-radius:6px; }
-    .locCard { max-width:920px; margin-top:12px; }
-    .mapControls { display:flex; gap:8px; align-items:center; margin-top:8px; }
-  </style>
 </head>
 <body>
 <?php require_once __DIR__ . "/../../partials/sidebar.php"; ?>

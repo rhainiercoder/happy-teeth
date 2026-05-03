@@ -71,9 +71,6 @@ $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
   <meta charset="utf-8" />
   <title>Admin - Reports</title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
-  <style>
-    .report-row{ display:flex; justify-content:space-between; gap:12px; padding:12px; border-bottom:1px solid rgba(11,31,42,.06); }
-  </style>
 </head>
 <body>
 <?php include __DIR__ . "/../../partials/sidebar.php"; ?>

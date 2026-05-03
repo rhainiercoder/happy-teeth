@@ -72,12 +72,6 @@ $msg = $_GET['msg'] ?? '';
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-  <style>
-    /* small style for map in admin settings */
-    #clinicMap { height: 360px; border:1px solid #ddd; border-radius:6px; margin-top:8px; }
-    .map-controls { display:flex; gap:8px; align-items:center; margin-top:6px; }
-    .coordField { width:140px; }
-  </style>
 </head>
 <body>
 <?php require_once __DIR__ . "/../../partials/sidebar.php"; ?>
@@ -107,8 +101,8 @@ $msg = $_GET['msg'] ?? '';
 
       <!-- Location map -->
       <label>Clinic location (click map to set marker)</label>
-      <div id="clinicMap" aria-hidden="false"></div>
-      <div class="map-controls">
+      <div id="clinicMap" class="map--compact" aria-hidden="false"></div>
+      <div class="mapControls">
         <label>Latitude
           <input class="authInput coordField" id="clinicLat" name="clinic_lat" value="<?php echo h($clinic_lat); ?>">
         </label>
@@ -116,7 +110,7 @@ $msg = $_GET['msg'] ?? '';
           <input class="authInput coordField" id="clinicLng" name="clinic_lng" value="<?php echo h($clinic_lng); ?>">
         </label>
         <label>Zoom
-          <input class="authInput" id="clinicZoom" name="clinic_map_zoom" value="<?php echo h($clinic_map_zoom); ?>" style="width:70px;">
+          <input class="authInput coordField" id="clinicZoom" name="clinic_map_zoom" value="<?php echo h($clinic_map_zoom); ?>">
         </label>
         <button type="button" class="btn" id="centerFromAddress">Center from address</button>
         <div style="flex:1"></div>
