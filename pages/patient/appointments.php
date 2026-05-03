@@ -47,54 +47,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && ($_POST["action"] ?? "") === "cance
 // Handle new request
 if ($_SERVER["REQUEST_METHOD"] === "POST" && empty($_POST["action"])) {
   $service_id = (int)($_POST["service_id"] ?? 0);
-  $date = trim($_POST["appointment_date"] ?? "");
-  $time = trim($_POST["appointment_time"] ?? "");
-  $note = trim($_POST["note"] ?? "");
+  $date       = trim($_POST["appointment_date"] ?? "");
+  $time       = trim($_POST["appointment_time"] ?? "");
+  $note       = trim($_POST["note"] ?? "");
 
   if ($service_id <= 0) $errors[] = "Please choose a service.";
-  if ($date === "") $errors[] = "Date is required.";
-  if ($time === "") $errors[] = "Time is required.";
+  if ($date === "")     $errors[] = "Date is required.";
+  if ($time === "")     $errors[] = "Time is required.";
 
   if (!$errors) {
-    date_default_timezone_set('Asia/Manila'); // adjust if needed
-
+    date_default_timezone_set('Asia/Manila');
     $today = date('Y-m-d');
     $nowHM = date('H:i');
 
-    $appointment_date = $_POST['appointment_date'] ?? '';
-    $appointment_time = $_POST['appointment_time'] ?? '';
-
-    if (!$appointment_date || !$appointment_time) {
-      $error = "Please select an appointment date and time.";
-    } else {
-      if ($appointment_date < $today) {
-        $error = "You cannot book an appointment in the past.";
-      } elseif ($appointment_date === $today) {
-        // block past time today
-        // (optional) add a buffer so they can't book "right now"
-        $bufferMinutes = 0; // change to 15 if you want
-        $nowPlusBuffer = date('H:i', time() + ($bufferMinutes * 60));
-
-        if ($appointment_time <= $nowPlusBuffer) {
-          $error = "You cannot book a past time for today.";
-        }
-      }
+    if ($date < $today) {
+      $errors[] = "You cannot book an appointment in the past.";
+    } elseif ($date === $today && $time <= $nowHM) {
+      $errors[] = "You cannot book a past time for today.";
     }
+  }
 
-    if (!empty($error)) {
-      // stop the insert and show message
-      // (if you redirect, store error in session instead)
-    }
+  // Only INSERT if there are still no errors
+  if (!$errors) {
     $stmt = $conn->prepare("
       INSERT INTO appointments (patient_id, service_id, appointment_date, appointment_time, status, note)
       VALUES (?, ?, ?, ?, 'pending', ?)
     ");
     $stmt->bind_param("iisss", $user["id"], $service_id, $date, $time, $note);
     $stmt->execute();
-
     $success = "Appointment request submitted (pending approval).";
   }
 }
+
 
 // Load history
 $stmt = $conn->prepare("
