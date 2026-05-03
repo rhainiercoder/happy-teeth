@@ -39,7 +39,7 @@ $app_time = substr($rec['appointment_time'] ?? '',0,5);
   <title>Dental Record #<?php echo h($rec['id']); ?></title>
   <link rel="stylesheet" href="/qm/assets/css/style.css">
   <style>
-    /* Print layout basics — tuned for A4 when printed */
+
     @page { margin: 18mm; }
     body { font-family: Arial, Helvetica, sans-serif; color:#111; background:#fff; }
     .rec-wrap { max-width: 800px; margin: 0 auto; padding: 18px; background:#fff; }

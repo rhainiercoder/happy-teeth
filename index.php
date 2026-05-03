@@ -681,9 +681,9 @@
   </div>
 
   <div class="doctors">
-    <div class="doc-card"><img src="assets/img/ms_joy.jpg" alt=""><h5>Ms. Joy</h5><span>Assistant</span></div>
+    <div class="doc-card"><img src="assets/img/ms_joy.jpg" alt=""><h5>Dr. Joy</h5><span>Dentist</span></div>
     <div class="doc-card"><img src="assets/img/dr_salamante.jpg" alt=""><h5>Dr. Paula Glenn Z. Salamante</h5><span>General Dentist</span></div>
-    <div class="doc-card"><img src="assets/img/ms_adele.jpg" alt=""><h5>Ms. Adele</h5><span>Assistant</span></div>
+    <div class="doc-card"><img src="assets/img/ms_adele.jpg" alt=""><h5>Dr. Adele</h5><span>Dentist</span></div>
   </div>
 </section>
 
